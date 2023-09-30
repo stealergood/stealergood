@@ -8,7 +8,7 @@ const AvatarCard = ({ profile, loading, avatarRing, resume }) => {
       <div className="grid place-items-center py-8">
         {loading || !profile ? (
           <div className="avatar opacity-90">
-            <div className="mb-8 rounded-full w-32 h-32">
+            <div className="mb-5 rounded-full w-32 h-32">
               {skeleton({
                 width: 'w-full',
                 height: 'h-full',
@@ -19,7 +19,7 @@ const AvatarCard = ({ profile, loading, avatarRing, resume }) => {
         ) : (
           <div className="avatar opacity-90">
             <div
-              className={`mb-8 rounded-full w-32 h-32 ${
+              className={`mb-3 rounded-full w-32 h-32 ${
                 avatarRing
                   ? 'ring ring-primary ring-offset-base-100 ring-offset-2'
                   : ''
@@ -55,9 +55,14 @@ const AvatarCard = ({ profile, loading, avatarRing, resume }) => {
               : profile.bio}
           </div>
         </div>
+        <div>
+          <h1 className="text-lg text-base-content opacity-70 font-mono">
+            Denny Edy Saputra
+          </h1>
+        </div>
         {resume?.fileUrl &&
           (loading ? (
-            <div className="mt-6">
+            <div className="mt-5">
               {skeleton({ width: 'w-40', height: 'h-8' })}
             </div>
           ) : (
